@@ -1,0 +1,37 @@
+{
+  "name": "react-module-federation-lib",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "serve": "yarn build && http-server ./dist --port 5000"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.5",
+    "@babel/preset-react": "^7.12.13",
+    "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
+    "bundle-loader": "^0.5.6",
+    "css-loader": "^5.0.2",
+    "html-webpack-plugin": "^5.2.0",
+    "mini-css-extract-plugin": "^1.3.8",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-loader": "^5.0.0",
+    "serve": "^11.3.2",
+    "style-loader": "^2.0.0",
+    "tailwindcss": "^2.0.3",
+    "webpack": "^5.24.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
