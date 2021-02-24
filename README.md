@@ -13,7 +13,7 @@ This is an example using 3 microfrontend and a shell wired with module federatio
 - `yarn serve` - Create prod bundle and serves them using `http-server`
 
 ### FAQ
-- sWhy some sections are not working?
+- Why some sections are not working?
 Make sure all 4 apps are running
 
 - Does Module Federation work on CRA?
@@ -23,8 +23,8 @@ Nope, not yet. Check out this [thread](https://github.com/facebook/create-react-
 
 ## React, Microfrontend y Module Federation
 
-Estas es una aplicacion de 3 microfrontends y un aplicacion shell
-la cual utilizan module federation para conectarse
+Estas es una aplicación de 3 microfrontends y un shell
+el cual utilizan module federation para conectarse
 
 ### Requerimientos
 - Node >= 12
@@ -32,16 +32,16 @@ la cual utilizan module federation para conectarse
 - Yarn / NPM
 
 ### Comandos
-- `yarn start` - Inicia aplicacion en modo dev
-- `yarn build` - Crea assets de produccion
-- `yarn serve` - Crea assets de produccion y los sirve atravez del paquete `http-server`
+- `yarn start` - Inicia aplicación en modo dev
+- `yarn build` - Crea assets de producción
+- `yarn serve` - Crea assets de producción y los sirve atravez del paquete `http-server`
 
 ### FAQ
-- ¿Porque algunas seccions no me funciona?
+- ¿Porqué algunas seccionnes no me funcionan?
 Asegurese de tener todos las aplicaciones corriendo
 
 - CRA soporta Module Federation?
-Nope, todavia no. Puede seguir este [thread](https://github.com/facebook/create-react-app/issues/9510)
+Nope, todavía no. Puede seguir este [thread](https://github.com/facebook/create-react-app/issues/9510)
 
 ### References
 - [Module Federation Docs](https://webpack.js.org/concepts/module-federation/)
