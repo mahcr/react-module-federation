@@ -1,13 +1,6 @@
 import React from 'react'
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom"
-
-const Form = ({ onLogin = () => ({}) }) => {
+const Form = ({ onLogin = () => ({}) }) => {  
   return (
     <div className="w-10/12 m-auto my-10 bg-white shadow-md lg:w-4/12 md:6/12">
       <div className="px-8 py-8 rounded-xl">

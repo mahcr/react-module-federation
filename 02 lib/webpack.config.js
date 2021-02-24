@@ -1,3 +1,4 @@
+const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
@@ -5,11 +6,15 @@ const { ModuleFederationPlugin } = require('webpack').container
 const deps = require('./package.json').dependencies
 
 module.exports = {
+  entry: {    
+    app: './src/index.js'
+  },
+
   resolve: {
     extensions: ['.js']
   },
 
-  devServer: {
+  devServer: {    
     port: 5001,
   },
 
@@ -35,15 +40,18 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
-      filename: './index.html'
+      filename: './index.html'  
     }),
 
     // MF Config
     new ModuleFederationPlugin({
       name: 'lib',
       filename: 'remoteEntry.js',
+      remotes: {
+        login: "login@http://localhost:5002/remoteEntry.js",
+      },
       exposes: {
-        './Header': './src/header/index'
+        './Header': './src/header/index'        
       },
       shared: {
         ...deps,

@@ -1,8 +1,14 @@
 import React from 'react'
+import { useSession } from 'login/session'
 
-const Header = () => {
+const Dashboard = () => {
+  const { isSessionActive } = useSession()
+  
   return (
-    <div className="mt-32">
+    <div className="px-32 mt-32">
+      <h1 className="text-4xl">Users</h1>
+      <h2 className="text-gray-400">Session {isSessionActive ? <span className="text-green-400">Active</span> : <span className="text-red-400">Inactive</span>}</h2>
+
       <table className="min-w-full table-auto">
         <thead className="justify-between">
           <tr>
@@ -157,4 +163,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Dashboard

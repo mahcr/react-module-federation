@@ -13,6 +13,10 @@ module.exports = {
     port: 5002,
   },
 
+  output: {
+    chunkFilename: '[name]-[contenthash].js',
+  },
+
   module: {
     rules: [
       {
@@ -41,10 +45,11 @@ module.exports = {
     // MF Config
     new ModuleFederationPlugin({
       name: 'login',
-      filename: 'remoteEntry.js',
+      filename: 'remoteEntry.js',      
       exposes: {
-        './form': './src/form/index'
-      },
+        './form': './src/form/index',
+        './session': './src/session/use-session'
+      },      
       shared: {
         ...deps,
         'react-router-dom': {
@@ -54,6 +59,9 @@ module.exports = {
           singleton: true
         },
         react: {
+          singleton: true
+        },
+        './src/session/use-session': {
           singleton: true
         }
       }
